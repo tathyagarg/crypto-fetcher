@@ -1,0 +1,10 @@
+cryptos:
+  - name: "Bitcoin"
+    symbol: "BTCUSDT"
+  - name: "Ethereum"
+    symbol: "ETHUSDT"
+  - name: "Litecoin"
+    symbol: "LTCUSDT"
+
+port: 8080
+data_directory: data
