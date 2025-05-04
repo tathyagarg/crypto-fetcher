@@ -83,7 +83,7 @@ def main():
                     writer = csv.DictWriter(csvfile, fieldnames=FIELDNAMES)
                     writer.writeheader()
 
-            thread = threading.Thread(target=crypto_fetch_thread, args=(symbol, data_directory), daemon=True)
+            thread = threading.Thread(target=crypto_fetch_thread, args=(symbol, data_directory))
             thread.start()
             threads.append(thread)
 
