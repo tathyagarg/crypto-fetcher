@@ -36,7 +36,7 @@ def crypto_fetch_thread(symbol: str, data_directory: Path) -> None:
             data = response.json()
             if data:
                 open_time, _open, high, low, close, volume, *_ = data[0]
-                timestamp = datetime.fromtimestamp(open_time / 1000).strftime('%Y-%m-%dT%H:%M:%SZ')
+                timestamp = datetime.fromtimestamp(open_time / 1000).strftime('%Y-%m-%d %H:%M:%S')
                 with open(data_directory / f"{symbol}.csv", "a", newline='') as csvfile:
                     writer = csv.DictWriter(csvfile, fieldnames=FIELDNAMES)
                     writer.writerow({
